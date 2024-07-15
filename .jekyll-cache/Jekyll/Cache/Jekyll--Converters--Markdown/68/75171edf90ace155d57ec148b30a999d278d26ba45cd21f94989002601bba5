@@ -1,0 +1,82 @@
+I"�<p><em>This file is part of: PHP Development Template Stack</em>
+<em>Copyright (c) 2024 Nico Jan Eelhart</em></p>
+
+<p><em>This source code is licensed under the MIT License found in the  ‘LICENSE.md’ file in the root directory of this source tree.</em>
+<br /><br /></p>
+
+<h1 id="what-rust-service">What Rust service</h1>
+
+<p>This is a Rust base image with optional extensions for the Rust frameworks (Rocket &amp; Warp currently). It contains:</p>
+
+<ol>
+  <li>Debian container with Rust.</li>
+  <li>Instructions for creating a local development container.</li>
+  <li>Instructions for adding additional frameworks.</li>
+</ol>
+
+<p>You can use this container to develop your Rust-based web application, When installing one of the web frameworks a project with a default sample web application will be created.
+Directory structure:</p>
+
+<ul>
+  <li><strong><em>RustService</em></strong> contains the Rust base service and the extension docker files</li>
+  <li><strong><em>Howtos</em></strong> directory with explanations of installation procedures and other instructions</li>
+  <li><strong><em>workdir</em></strong> directory that will be ‘bind mounted’ in Linux for projects (Note, Linux directories in small case)</li>
+</ul>
+
+<hr />
+
+<h1 id="where-to-find-more-information">Where to find more information</h1>
+<p>More documents can be found in the ‘Howto” directory. It contains:</p>
+<ol>
+  <li>For creating this Rust Docker container: open <a href="./Howtos/howto_create_A_dev_container">how to create a development container</a></li>
+  <li>To add framework projects, these instructions are also available in the same document, see the document on <a href="./Howtos/howto_create_A_dev_container">how to create a development container</a></li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+<h3 id="my-personal-folder-concept-structure">My personal folder concept structure</h3>
+<p>The containers are <strong>maintained only here</strong>. After creation or updating of the container, the container is copied to the program language folder inside the   <strong>_docker-template</strong> folder. From there it can be used in projects, example:</p>
+
+<p><small style="display: block; margin-bottom: -18px;"><b><i>Folder concept</i></b></small></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>language</strong></th>
+      <th style="text-align: left"><strong>Copy to Template Location</strong></th>
+      <th style="text-align: left"><strong>Use at Project Location</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Rust</td>
+      <td style="text-align: left">\Rust\_docker-template\</td>
+      <td style="text-align: left">\Rust\Projects\projectX</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Python</td>
+      <td style="text-align: left">\Python\_docker-template\</td>
+      <td style="text-align: left">\Python\Projects\ProjectY</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><small><i>Check the version of the template in the ‘index.md’ file (root)</i></small> <br /><br /></p>
+
+<blockquote>
+  <p><em style="color: Grey;font-size:13px; ">Remark:</em> <br />
+<small>Of course, you may change the container docker templates files for specific reasons but do this in the specific project folder! When a change is generic it should be added (merged) into the development container here.</small></p>
+</blockquote>
+
+<p><br />
+<small><i>Version: 1.03 release 1 version June 19 2024 </i></small></p>
+
+<!--
+<br><br><br>
+# Table of content
+* Table of Contents
+{:toc}
+-->
+:ET
