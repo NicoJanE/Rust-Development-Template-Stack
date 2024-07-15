@@ -26,9 +26,9 @@ Directory structure:
 ----
 
 # Where to find more information
-More documents can be found in the 'Howto" directory. It contains:
-1. For creating this Rust Docker container: open [how to create a development container](./Howtos/howto_create_A_dev_container) 
-1. To add framework projects, these instructions are also available in the same document, see the document on [how to create a development container](./Howtos/howto_create_A_dev_container) 
+More documents can be found in the 'Howto" directory. 
+1. For creating this Rust Docker container: open [how to create a development container](./Howtos/Howto_Create_A_Dev_container) 
+1. To add framework projects, these instructions are also available in the same document, see the document on [how to create a development container](./Howtos/Howto_Create_A_Dev_container) 
 
 <br>
 
