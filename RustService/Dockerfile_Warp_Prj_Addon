@@ -1,0 +1,39 @@
+# This file is part of: PHP Development Template Stack 
+# Copyright (c) 2024 Nico Jan Eelhart
+#
+# This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+#
+# Version: 1.01
+
+
+# This requires that the base image is build(docker  compose -f compose_rust_cont.yml up -d)
+#	Extending/Chaining 
+#	Installs rocker project test environment in the docker image:''
+#
+# Use the base image
+FROM eelhart/rust:latest
+ENV WORKDIR="/app"										
+ENV PRJ_BASE="/warp"									
+
+# 1) Prepare new directory for rust Web Warp project
+ARG PRJ_NAME_ARG=${PRJ_NAME_ARG}						# MUST BE DONE! 														
+RUN echo "Project Name: ${PRJ_NAME_ARG}"				# Make sure this environment variable is set! ( $env:PRJ_NAME_ARG="my_project_dir" )
+
+# 2) Create the project directory using the PRJ_NAME
+RUN cargo new ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}
+
+# 3) Add dependencies to Cargo.toml
+RUN echo "warp = \"0.3\"" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml && \
+    echo "tokio = { version = \"1\", features = [\"full\"] }" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml && \
+	echo "config = \"0.13\"" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml && \
+	echo "serde = { version = \"1.0\", features = [\"derive\"] }" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml && \
+	echo "toml = \"0.5\"" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml 
+
+# 4) Copy customized files for Warp configuration and the a template sample main app
+COPY ./Warp_customized/main.rs ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/src/main.rs
+COPY ./Warp_customized/config.rs ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/src/config.rs
+COPY ./Warp_customized/Config.toml ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Config.toml
+
+
+# End Docker file 
+# CALL: docker  compose --env-file .env -f compose_rocket_prj_addon.yml up -d --build --force-recreate

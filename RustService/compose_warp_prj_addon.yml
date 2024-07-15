@@ -1,0 +1,48 @@
+# This file is part of: PHP Development Template Stack 
+# Copyright (c) 2024 Nico Jan Eelhart
+#
+# This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+#
+
+#	Extending/Chaining 
+#	Installs Rocker web framework environment in the docker image:''
+#
+##   NOTE 1. Some notes regarding chaining and not using 'extends':
+##   -- Bind mounts don't carry over, you have to specify them again
+##   -- same counts for network and pretty much all items
+##
+##   - So better to use a common compose file and let the other compose files extend from 
+##     items(like we done in this file, see extends: )
+
+networks:
+   nje-net:                                 # Define a network
+
+
+services:
+  rust-base-img:                            # Same name as base file!
+    extends: 
+      file: compose_rust_cont.yml           # our base compose file, see NOTE 1
+      service: rust-base-img                # Same name as base file!
+    build:
+      context: .
+      dockerfile: Dockerfile_Warp_Prj_Addon
+      args:
+        PRJ_NAME_ARG: ${PRJ_NAME_ARG}
+    image: eelhart/rust:latest              # This name can be used to extend or chain this image(see Addon* files).
+    ports:
+      - "3030:3030"                         # host:cont MUST also be specified in: config.toml!
+    volumes:
+      - ../workdir:/host/workdir            # Bind mount host container, here the project files will land
+# End compose file 
+
+
+# build with:
+#
+# docker  compose -f compose_warp_prj_addon.yml up -d  --remove-orphans --build --force-recreate
+# docker  compose -f compose_warp_prj_addon.yml up -d --build --force-recreate
+# 
+# DOC TODO
+# cargo build --release
+# cargo run --release
+#  http://localhost:3030/
+# 

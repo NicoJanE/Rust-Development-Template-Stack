@@ -1,0 +1,35 @@
+# This file is part of: PHP Development Template Stack 
+# Copyright (c) 2024 Nico Jan Eelhart
+#
+# This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+#
+# Version: 1.01
+
+
+# This requires that the base image is build(docker  compose -f compose_rust_cont.yml up -d)
+#	Extending/Chaining 
+#	Installs rocker project test environment in the docker image:''
+#
+# Use the base image
+FROM eelhart/rust:latest
+ENV WORKDIR="/app"										
+ENV PRJ_BASE="/rocket"									
+
+# 1) Prepare new directory for rust Web Rocket project
+ARG PRJ_NAME_ARG=${PRJ_NAME_ARG}						# MUST BE DONE! 														
+RUN echo "Project Name: ${PRJ_NAME_ARG}"				# Make sure this environment variable is set! ( $env:PRJ_NAME_ARG="my_project_dir" )
+
+# 2) Create the project directory using the PRJ_NAME
+RUN cargo new ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}
+
+# 3) Add dependencies to Cargo.toml
+RUN echo "rocket = \"0.5.1\"" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml && \
+    echo "rocket_codegen = \"0.5.1\"" >> ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Cargo.toml
+
+# 4) Copy customized files for rocket configuration and the a template sample main app
+COPY ./Rocket_customized/main.rs ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/src/main.rs
+COPY ./Rocket_customized/Rocket.toml ${WORKDIR}${PRJ_BASE}/${PRJ_NAME_ARG}/Rocket.toml
+
+
+# End Docker file 
+# CALL: docker  compose --env-file .env -f compose_rocket_prj_addon.yml up -d --build --force-recreate

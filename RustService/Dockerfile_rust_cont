@@ -1,0 +1,33 @@
+# Base image
+FROM ubuntu:24.04
+
+# Install system packages
+RUN apt-get update && apt-get install -y \
+    curl nano build-essential \
+	&& rm -rf /var/lib/apt/lists/*
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |sh -s -- -y
+
+
+# Add environment variables
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+
+# RUN ....
+
+# Set working directory for subsequent commands
+WORKDIR /app
+
+# Don't put behind the port on same line = error!
+#EXPOSE 4000
+
+
+# Keep  container running with this main process
+# NOT that the CMD in the docker file is the 'basic/general' command executed(Docker needs a primary process)
+# When adding a CMD command in the compose file the Compose version will override the docker CMD 
+#
+CMD ["tail", "-f", "/dev/null"]
+# Keep the container running alternative
+# CMD ["/bin/bash"]					# Run needs to run interactive: 'docker container run -it [image name] bash'
+# Keep the container running alternative
+# CMD ["sh", "-c", "while true; do sleep 1000; done"]

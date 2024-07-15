@@ -1,0 +1,25 @@
+networks:
+  nje-net:                          # Define a network
+
+volumes:
+  nje-shared_container-vol:         # named volumes, for: sharing data between containers, persistent data
+                                    # can be used in service volumes, like: nje-shared_container-vol:./workspace/shared 
+
+services:
+  rust-base-img:                    # The service 
+    build: 	    
+      context: .
+      dockerfile: Dockerfile_rust_cont 
+    image: eelhart/rust:latest             # This name can be used to extend or chain this image(see Addon* files).
+#    command:                              # Overrides docker file CMD command
+#    ports:
+#      - "4000:4000"                       # host:cont
+    networks:    
+        - nje-net                          # Use this Network
+#    volumes:
+#      - .:/srv/jekyll                     # host:cont     
+
+# Create and start: docker-compose -f compose_rust_cont.yml up -d --build --force-recreate
+# test:
+# rustc --version
+# cargo --version
