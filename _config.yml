@@ -4,6 +4,10 @@ show_downloads: true
 google_analytics:
 theme: jekyll-theme-architect
 
+# Used for discussion link
+repository_owner: NicoJanE                          # kind of fixed
+repository_name: Rust-Development-Template-Stack    # Update this(repository name) if discussions are enabled in GitHub. When Empty it will state 'no Discussions'
+
 
 plugins:
   - jekyll-remote-theme 
