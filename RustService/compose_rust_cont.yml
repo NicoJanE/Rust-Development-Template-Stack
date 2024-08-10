@@ -16,7 +16,8 @@ services:
 #      - "4000:4000"                       # host:cont
     networks:    
         - nje-net                          # Use this Network
-#    volumes:
+    volumes:
+        - ./shared-host:/shared-host                                            # General Bind Mount for shared files between host <> container for backups and others
 #      - .:/srv/jekyll                     # host:cont     
 
 # Create and start: docker-compose -f compose_rust_cont.yml up -d --build --force-recreate
