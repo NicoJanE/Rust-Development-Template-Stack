@@ -28,6 +28,8 @@ Directory structure:
 - ***Howtos*** directory with explanations of installation procedures and other instructions         
 - ***workdir*** directory that will be 'bind mounted' in Linux for projects (Note, Linux directories in small case)
 
+> **For the first stable release, use the release/1.0 template branch**
+
 ----
 
 # Where to find more information
