@@ -1,15 +1,14 @@
----
-layout: default
---- 
+# Rust <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Setup & Usage Guide</span>
 
-# What Rust service
+## ℹ️ Introduction
+
 This is a Rust base Docker image with optional, project, extensions for the Rust frameworks (Rocket & Warp currently).
+You can use this container to start programming in your local environment for development and testing purposes. 
 
-You can use this container to start programming in your local environment for development and testing purposes. For the rest of the documentation open the [main documentation page](https://nicojane.github.io/Rust-Development-Template-Stack/). Other DTS containers can be found [here](https://nicojane.github.io/Docker-Template-Stacks-Home/)
+## ⚡ Quick Links
 
-<sub> &nbsp;&nbsp;&nbsp;&nbsp; *Is this a local repository project? Then use this local link [main page](./index) file. <sub>
-<br><br>
-
+- For the **main page** [click here](https://nicojane.github.io/Rust-Development-Template-Stack/)
+- Use this link for the **setup page** [click here](https://nicojane.github.io/Rust-Development-Template-Stack/Howtos/howto_create_a_dev_container)
 
 <details closed>  
   <summary class="clickable-summary">
@@ -29,5 +28,13 @@ You can use this container to start programming in your local environment for de
 >- Alternatively, you can click the 'Open Preview to the Side' button at the top right. 
 >
 ><br>
-<a href="https://github.com/mjbvz/vscode-github-markdown-preview-style" target="_blank">Click here for more information on the Markdown Preview GitHub Styling plugin</a>
+><a href="https://github.com/mjbvz/vscode-github-markdown-preview-style" target="_blank">Click here for more information on the Markdown Preview GitHub Styling plugin</a>
 </details>
+
+<br>
+
+<p align="center">
+  <a href="https://nicojane.github.io/Docker-Template-Stacks-Home">
+    <img src="assets/images/DTSfooter.svg" alt="DTS Template Stacks" width="400" />
+  </a>
+</p>
