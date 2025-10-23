@@ -11,7 +11,6 @@ _Copyright (c) 2024 Nico Jan Eelhart_
 _This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree._
 </small>
 <br><br>
-<br>
 
 # What Rust service
 
@@ -33,12 +32,13 @@ Directory structure:
 ----
 
 # Setup Information
-More documents can be found in the 'Howto" directory. 
-1. For creating and starting this Rust Docker container: open [how to create a development container](./Howtos/howto_create_a_dev_container) 
-1. To add framework projects, these instructions are also available in the same document, [click here](./Howtos/howto_create_a_dev_container#add-on_webrocket) to go directly to that paragraph.
+
+More documents can be found in the 'Howto" directory.
+
+1. For creating and starting this Rust Docker container: open [**how to create this container**](./Howtos/howto_create_a_dev_container) 
+1. To add framework projects, these instructions are also available in the same document, [**click here**](./Howtos/howto_create_a_dev_container#add-on_webrocket) to go directly to that paragraph.
 
 <br>
-
 <p align="center">
   <a href="https://nicojane.github.io/Docker-Template-Stacks-Home">
     <img src="assets/images/DTSfooter.svg" alt="DTS Template Stacks" width="400" />
