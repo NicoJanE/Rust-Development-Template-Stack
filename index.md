@@ -38,10 +38,6 @@ More documents can be found in the 'Howto" directory.
 1. To add framework projects, these instructions are also available in the same document, [click here](./Howtos/howto_create_a_dev_container#add-on_webrocket) to go directly to that paragraph.
 
 <br>
-<div align="center"> ─── ✦ ───
-</div>
-
-<br>
 
 <p align="center">
   <a href="https://nicojane.github.io/Docker-Template-Stacks-Home">
