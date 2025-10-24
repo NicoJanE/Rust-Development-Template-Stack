@@ -61,4 +61,4 @@ After this, you can open a browser on the host and navigate to: [http://localhos
 This file is part of:**Rust Template Stack**
 Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
 
-<div align="center"> ─── ✦ ─── </div>
+<center>─── ✦ ───</center>

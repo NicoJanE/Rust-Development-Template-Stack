@@ -41,7 +41,7 @@ More documents can be found in the 'Howto" directory.
 <span style="color: #6d757dff; font-size: 10px; font-style: italic;"> <br>
 This file is part of:**Rust Template Stack**
 Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
-<div align="center"> ─── ✦ ─── </div>
+<center>─── ✦ ───</center>
 
 
 
