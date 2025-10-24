@@ -44,8 +44,8 @@ You can use this container to start programming in your local environment for de
   </a>
 </p>
 
-<span style="color: #6d757dff; font-size: 10px; font-style: italic;"> <br>
+<small><small><small>
 This file is part of: **Rust Template Stack**
-Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
-</small>
+Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+</small></small></small>
 <div align="center"> ─── ✦ ─── </div>

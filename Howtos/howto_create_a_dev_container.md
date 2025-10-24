@@ -14,7 +14,7 @@ This guide contains instructions for creating, starting, and customizing a Rust 
 docker-compose -f compose_rust_cont.yml up -d --build --force-recreate
 </pre>
 
-## 🛠️ Web Rocket Setup (Optional)
+### 🛠️ Web Rocket Setup (Optional)
 
 You can add one or more **Rocket** web framework projects. This creates a new project directory and installs the required libraries.
 
@@ -34,7 +34,7 @@ docker-compose -f compose_rocket_prj_addon.yml up -d --build --force-recreate
 </pre>
 
 >*Note:*{: style="color: orange;font-size:13px; "} <br>
-> <small>Your project is created in `/app/[project_name]`. If the environment variable is not set, a default name is used.* <s/mall>
+> <small>Your project is created in `/app/[project_name]`. If the environment variable is not set, a default name is used.* </small>
 
 3. Open a CLI in the container, navigate to the newly created project directory (`project_name`), and execute these commands to **build** and **run** the project:
 
@@ -60,5 +60,5 @@ After this, you can open a browser on the host and navigate to: [http://localhos
 <span style="color: #6d757dff; font-size: 10px; font-style: italic;"> <br>
 This file is part of:**Rust Template Stack**
 Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
-</small>
+
 <div align="center"> ─── ✦ ─── </div>
