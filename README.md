@@ -10,16 +10,14 @@ You can use this container to start programming in your local environment for de
 - For the **main page** [click here](https://nicojane.github.io/Rust-Development-Template-Stack/)
 - Use this link for the **setup page** [click here](https://nicojane.github.io/Rust-Development-Template-Stack/Howtos/howto_create_a_dev_container)
 
-<details closed>  
-  <summary class="clickable-summary">
-  <span  class="summary-icon"></span> 
-  Side note: Preview the markdown files(.md)
-  </summary> 	<!-- On same line is failure, Don't indent the following Markdown lines!  -->
+<br>
 
-> <br>
-> 
-> ### Preview the markdown files(.md)
->
+<details>
+<summary class="clickable-summary"> <span class="summary-icon"></span>
+    <span style="color: #097df1ff; font-size: 20px;">Appendix I</span> <span style="color: #409EFF; font-size: 16px; font-style: italic;"> -  Preview the MarkDown files </span>
+</summary>
+
+#### 📎 Preview the MarkDown files(.md)
 >To preview the Markdown (MD) files in this project, one of the best solutions is to open these files in Visual Studio Code (VSC) and install the plugin: **Markdown Preview GitHub Styling** (Tested with version 2.04). Other plugins, or plugins for other programs, may not always work correctly with the file links in the documentation. I use the file link syntax supported by GitHub (Jekyll), which is also compatible with the above-mentioned plugin.
 >
 > To display the Preview screen in VSC: 
@@ -31,6 +29,13 @@ You can use this container to start programming in your local environment for de
 ><a href="https://github.com/mjbvz/vscode-github-markdown-preview-style" target="_blank">Click here for more information on the Markdown Preview GitHub Styling plugin</a>
 </details>
 
+
+
+
+
+
+
+
 <br>
 
 <p align="center">
@@ -38,3 +43,9 @@ You can use this container to start programming in your local environment for de
     <img src="assets/images/DTSfooter.svg" alt="DTS Template Stacks" width="400" />
   </a>
 </p>
+
+<span style="color: #6d757dff; font-size: 10px; font-style: italic;"> <br>
+This file is part of: **Rust Template Stack**
+Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
+</small>
+<div align="center"> ─── ✦ ─── </div>
