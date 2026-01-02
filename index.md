@@ -5,15 +5,20 @@ RefPages:
 --- 
 
 
-# Rust <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Container</span>
+# Rust Development <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Container</span>
+
+![MIT License](https://img.shields.io/badge/License-MIT-green) ![Commercial Services Available](https://img.shields.io/badge/Services-Optional-blue)
 
 ## ℹ️ Introduction
 
-This is a Rust base image with optional project extensions for Rust frameworks (Rocket & Warp currently). It contains:
+This repository provides a Rust development environment using Docker containers, designed for building modern web applications. It includes:
 
-1. Debian container with Rust.
-1. Instructions for creating a local development container. 
-1. Instructions for adding additional frameworks.
+1. **Debian-based Rust container** - Pre-configured development environment with the latest Rust toolchain.
+2. **Web framework support** - Optional extensions for Rocket and Warp frameworks with sample projects.
+3. **Local development setup** - Step-by-step instructions for creating and customizing your development container.
+4. **Framework integration** - Easy-to-follow guides for adding additional Rust frameworks to your project.
+
+Use this container to streamline your Rust web application development with minimal setup time.
 
 ## 📁 Repository Structure
 
@@ -32,15 +37,17 @@ More documents can be found in the 'Howto" directory.
 1. To add framework projects, these instructions are also available in the same document, [**click here**](./Howtos/howto_create_a_dev_container#add-on_webrocket) to go directly to that paragraph.
 
 <br>
+<small> <i><b>License</b><br>This file is part of: <b>Rust Template Stack</b>  Copyright (c) 2025-2026 Nico Jan Eelhart.This repository is <a href="MIT-license.md">MIT licensed</a>and free to use. For optional commercial support, customization, training, or long-term maintenance, see <a href="COMMERCIAL.md">COMMERCIAL.md</a></i>
+</small>
+
+<br><br>
 <p align="center">
   <a href="https://nicojane.github.io/Docker-Template-Stacks-Home">
     <img src="assets/images/DTSfooter.svg" alt="DTS Template Stacks" width="400" />
   </a>
 </p>
 
-<span style="color: #6d757dff; font-size: 10px; font-style: italic;"> <br>
-This file is part of:**Rust Template Stack**
-Copyright (c) 2024 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.</span>
+<br>
 <center>─── ✦ ───</center>
 
 
